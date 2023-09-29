@@ -14,6 +14,7 @@
             display: flex;
             justify-content: space-between; /* Расположение блоков по краям */
             align-items: center; /* Выравнивание по центру вертикально */
+            border-radius: 20px;
         }
 
         .header-border {
@@ -32,10 +33,10 @@
         background-color: #008164;
         border-radius: 20px;
         padding: 20px 30px; /* Уменьшил внутренний отступ */
-        margin-left: 5px;
-        width: 110px; /* Задал определенную ширину блоков */
+        margin-left: -10%;
+        width: 160px; /* Задал определенную ширину блоков */
         white-space: normal; /* Перенос текста на новую строку */
-		text-align: center;
+		    text-align: center;
     }
 
 		.underline {
@@ -48,39 +49,40 @@
         border-radius: 20px;
         padding: 20px 30px; /* Уменьшил внутренний отступ */
         margin-right: 25px;
-        width: 110px; /* Задал определенную ширину блоков */
+        width: 160px; /* Задал определенную ширину блоков */
         white-space: normal; /* Перенос текста на новую строку */
-		text-align: center;
+	     	text-align: center;
     }
 
         .header-block-text {
             color: white;
+            font-size: 20px;
         }
-
-
-
 
     .header-left-block {
         background-color: white;
         padding: 10px 15px;
-        margin-right: 10px;
-        width: 150px;
+        margin-left: 2%;
+        width: 10%;
         white-space: normal;
+        min-width: 9%;
     }
 
 	.header-right-block {
         background-color: white;
         padding: 10px 15px;
         margin-right: 50rem;
-        width: 300px;
+        width: 20%;
         white-space: normal;
+        min-width: 19%;
     }
 
         .container {
+            min-width: 10%;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 60px;
+            padding: 6%;
             flex-grow: 1;
             flex-direction: column;
         }
@@ -131,13 +133,13 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    margin-top: 25px;
-                  
+
                 }
 
                 .icon-square img {
                     width: 25px;
                     height: 30px;
+                    margin-top: 4px;
                 }
 
                 .underline {
@@ -179,19 +181,21 @@
             }
 
     .footer-right {
-        display: flex;
+        d isplay: flex;
         align-items: center;
         margin-left: 100rem;
     }
 
     .green-block {
         background-color: #008164;
-        border-radius: 20px;
-        padding: 10px 20px;
+        border-radius: 10px;
+        padding: 15px 20px;
+        text-align: right;
+        margin-top: -12px;
     }
 
     .white-text {
-        color: white;
+        color: white
     }
 
     .container2 {
@@ -201,10 +205,19 @@
 
     .inline_block {
       display: inline-block;
-      margin-left: 15px;
+      margin-left: 25px;
+      margin-top: 20px;
     }
 
 .text_perenos {
   word-wrap: break-word;
   width: 50%;
+}
+
+.button {
+ border: medium none;
+ background-image: none;
+ background: transparent;
+ background-color: transparent;
+ cursor: pointer;
 }
