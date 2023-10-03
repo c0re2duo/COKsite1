@@ -4,7 +4,16 @@
 
 
 html {
-    margin: 50px;
+    display: table;
+    margin: 30px auto;
+}
+
+
+body {
+    /* margin-top: 10px; */
+    width: 1280px;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 
@@ -161,3 +170,26 @@ header {
     text-align: center;
     padding: 5px 0px;
 }
+
+
+.main_video {
+    margin: 15px 0px;
+    width: 100%;
+    height: 700px;
+    border: 2px solid var(--main-color)
+}
+
+/*
+.footer_text_container {
+    display: flex;
+    justify-content: center;
+    font-size: 45px;
+    font-weight: bold;
+    /* text-align: center; */
+    align-items: center;
+}
+
+
+.footer_text img {
+    height: 60%;
+} */
