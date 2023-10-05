@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="styles/main.css">
+	<script src="JS/main.js"></script>
 </head>
 <body>
 <div class="header-border">
@@ -33,8 +34,14 @@
               <div class="footer-block container2">
                 <div class="inline_block text_perenos">ОСВОЕНИЕ <p>НОВОГО МАТЕРИАЛА</div>
               <div class="icon-square inline_block">
-                  <button class='button'><img src="image/question-mark-icon.png" alt="Знак вопроса"></button>
-              </div>
+                  <button class='button' "open-modal-button" onclick="openModal('<h3>ОСВОЕНИЕ НОВОГО МАТЕРИАЛА</h3> <br> Текст')"><img src="image/question-mark-icon.png" alt="Знак вопроса"></button>
+						<div id="myModal" class="modal">
+							<div class="modal-content">
+								<p></p>
+								<button onclick="closeModal('myModal1')">Закрыть</button>
+							</div>
+						</div>
+			  </div>
               </div>
               <div class="footer-block">
                   <img src="image/main1.png" alt="Изображение">
@@ -50,7 +57,7 @@
                     <div class="footer-block container2">
                   <div class="inline_block text_perenos">ПРИМЕНЕНИЕ <p>ИЗУЧЕННОГО МАТЕРИАЛА</div>
                   <div class="icon-square inline_block">
-                      <button class='button'><img src="image/question-mark-icon.png" alt="Знак вопроса"></button>
+                      <button class='button' "open-modal-button" onclick="openModal('<h3>ПРИМЕНЕНИЕ ИЗУЧЕННОГО МАТЕРИАЛА</h3> <br> Текст')"><img src="image/question-mark-icon.png" alt="Знак вопроса"></button>
                   </div>
               </div>
               <div class="footer-block">
@@ -67,7 +74,7 @@
               <div class="footer-block container2">
             <div class="inline_block text_perenos">ДИАГНОСТИКА ПРИОБРЕТЕННЫХ ЗНАНИЙ, УМЕНИЙ, НАВЫКОВ</div>
             <div class="icon-square inline_block">
-                <button class='button'><img src="image/question-mark-icon.png" alt="Знак вопроса"></button>
+                <button class='button' "open-modal-button" onclick="openModal('<h3>ДИАГНОСТИКА ПРИОБРЕТЕННЫХ ЗНАНИЙ, УМЕНИЙ, НАВЫКОВ</h3> <br> Текст')"><img src="image/question-mark-icon.png" alt="Знак вопроса"></button>
             </div>
         </div>
         <div class="footer-block">
