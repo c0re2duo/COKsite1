@@ -187,7 +187,7 @@ button.header_button {
     vertical-align: middle;
     font-size: 25px;
     color: white;
-
+	cursor: pointer;
 }
 
 .header_button p {

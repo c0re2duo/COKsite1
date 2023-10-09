@@ -133,7 +133,7 @@ li {
 .modal {
     display: none; /* По умолчанию скрыто */
     position: fixed;
-    margin: -15rem 3%;
+    margin: -15rem -100px;
     width: 60rem;
     height: 30rem;
     background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон */
@@ -159,16 +159,16 @@ li {
     display: none;
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     overflow: auto;
 }
 
 .button_hint {
     width: 600px;
     height: 400px;
-    position: absolute;
+    position: fixed;
     top: 30%;
-    left: 72.5%;
+    left: 63%;
     margin: -125px 0 0 -125px;
     border: 2px solid var(--main-color);
     border-radius: 15px;
