@@ -1,100 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="styles/main.css">
-	<script src="JS/main.js"></script>
+    <link rel="stylesheet" href="styles/index.css">
+    <script src="JS/main.js"></script>
 </head>
+
 <body>
-<div class="header-border">
-    <div class="header">
-        <div class="header-left-block">
-            <span class="header-left-block-text underline"><b class='size'>ФГОС 43.02.15</b></span><p>Кондитерское и поварское дело</p></span>
+
+    <header>
+        <div class="header_container container">
+            <div class="header_block" id="header_block1">
+                <p>
+                    <b>
+                        <u>
+                            ФГОС 43.02.15
+                        </u>
+                    </b>
+                    <br> Кондитерское и
+                    <br> поварское дело
+                </p>
+            </div>
+            <div id="header_vertical_line"></div>
+            <div class="header_block" id="header_block2">
+                <p>
+                    <b>
+                        <u>
+                            МДК.02.01.
+                        </u>
+                    </b>
+                    <br> Организация процессов приготовления, подготовки к реализации горячих блюд, кулинарных изделий и закусок сложного ассортимента
+                </p>
+            </div>
+            <button class="header_block header_button" id="header_block3" onclick="openButtonHint('<h4>Ключевые слова</h4>Блок тест Блок тест Блок теwст sБлок тест Блок тasdст Блок тест Блок тест Блок тест Блок тест Блок тест Блокeqr тест Блок тестer Блок тест Блок тест ')">
+                <p>
+                    Ключевые
+                    <br> слова
+                </p>
+            </button>
+            <button class="header_block header_button" id="header_block4" onclick="openButtonHint('<h4>Ключевые слова</h4>Блок тест Блок тест Блок теwст sБлок тест Блок тasdст Блок тест Блок тест Блок тест Блок тест Блок тест Блокeqr тест Блок тестer Блок тест Блок тест ')">
+                <p>
+                    Информация
+                    <br> о контенте
+                </p>
+            </button>
         </div>
-        <div id="header_vertical_line"></div>
-        <div class="header-right-block">
-            <span class="header-right-block-text underline"><b class='size'>МДК 02.01</b></span><p>Организация процессов приготовления, подготовки к реализации горячих блюд, кулинарных изделий и закусок сложного ассортимента</p></span>
-        </div>
-        <div class="header-block-left">
-            <button class='button' onclick="openButtonHint('<h4>Ключевые слова</h4>Блок тест Блок тест Блок теwст sБлок тест Блок тasdст Блок тест Блок тест Блок тест Блок тест Блок тест Блокeqr тест Блок тестer Блок тест Блок тест ')"><span class="header-block-text">Ключевые слова</span></button>
-        </div>
-        <div class="header-block-right">
-            <button class='button' onclick="openButtonHint('2 тест блок тефывкст ахзазх 2 тест блоык тексвыт ахзазх 2 тест бфылок текст ахзазх 2 тест блок текст ахзазх ')"><span class="header-block-text">Информация о контенте</span></button>
-        </div>
-    </div>
-</div>
-    <div class="container">
+    </header>
+
+    <!-- onclick="openButtonHint('<h4>Ключевые слова</h4>Блок тест Блок тест Блок теwст sБлок тест Блок тasdст Блок тест Блок тест Блок тест Блок тест Блок тест Блокeqr тест Блок тестer Блок тест Блок тест ')" -->
+
+    <main>
         <div class="content">
             <h1><u>Тема:</u> Характеристика процессов приготовления, подготовки к реализации горячих блюд, кулинарных изделий и закусок сложного ассортимента</h1>
         </div>
-        <div class="blocks-container">
-            <div class="block">
-              <div class="footer-block container2">
-                <div class="inline_block text_perenos">ОСВОЕНИЕ <p>НОВОГО МАТЕРИАЛА</div>
-              <div class="icon-square inline_block">
-                  <button class='button' "open-modal-button" onclick="openModal('<h3>ОСВОЕНИЕ НОВОГО МАТЕРИАЛА</h3> <br> Текст')"><img src="image/question-mark-icon.png" alt="Знак вопроса"></button>
-						<div id="myModal" class="modal">
-							<div class="modal-content">
-								<p></p>
-								<button onclick="closeModal('myModal1')">Закрыть</button>
-							</div>
-						</div>
-			  </div>
-              </div>
-              <div class="footer-block">
-                  <img src="image/main1.png" alt="Изображение">
-                  <h1 class="underline">Тема ЭОМ</h1>
-              </div>
-              <div class="footer-block">
-                  <div class="icon-square">
-                      <a href="page2.html"><img src="image/play-icon.png" alt="Запуск видео"></a>
-                  </div>
-              </div>
-                  </div>
-                  <div class="block">
+            <div class="blocks-container">
+                <div class="block">
                     <div class="footer-block container2">
-                  <div class="inline_block text_perenos">ПРИМЕНЕНИЕ <p>ИЗУЧЕННОГО МАТЕРИАЛА</div>
-                  <div class="icon-square inline_block">
-                      <button class='button' "open-modal-button" onclick="openModal('<h3>ПРИМЕНЕНИЕ ИЗУЧЕННОГО МАТЕРИАЛА</h3> <br> Текст')"><img src="image/question-mark-icon.png" alt="Знак вопроса"></button>
-                  </div>
-              </div>
-              <div class="footer-block">
-                  <img src="image/main2.png" alt="Изображение">
-                  <h1 class="underline">Тема ЭОМ</h1>
-              </div>
-              <div class="footer-block">
-                  <div class="icon-square">
-                      <a href="page3.html"><img src="image/play-icon.png" alt="Запуск видео"></a>
-                  </div>
-              </div>
-                  </div>
-            <div class="block">
-              <div class="footer-block container2">
-            <div class="inline_block text_perenos">ДИАГНОСТИКА ПРИОБРЕТЕННЫХ ЗНАНИЙ, УМЕНИЙ, НАВЫКОВ</div>
-            <div class="icon-square inline_block">
-                <button class='button' "open-modal-button" onclick="openModal('<h3>ДИАГНОСТИКА ПРИОБРЕТЕННЫХ ЗНАНИЙ, УМЕНИЙ, НАВЫКОВ</h3> <br> Текст')"><img src="image/question-mark-icon.png" alt="Знак вопроса"></button>
+                        <div class="inline_block text_perenos">ОСВОЕНИЕ
+                            <p>НОВОГО МАТЕРИАЛА</div>
+                        <div class="icon-square inline_block">
+                            <button class='button' "open-modal-button" onclick="openModal('<h3>ОСВОЕНИЕ НОВОГО МАТЕРИАЛА</h3> <br> Текст')"><img src="image/question-mark-icon.png" alt="Знак вопроса"></button>
+                            <div id="myModal" class="modal">
+                                <div class="modal-content">
+                                    <p></p>
+                                    <button onclick="closeModal('myModal1')">Закрыть</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- </main>    -->
+                        <div class="footer-block">
+                            <img src="image/main1.png" alt="Изображение">
+                            <h1 class="underline">Тема ЭОМ</h1>
+                        </div>
+                        <div class="footer-block">
+                            <div class="icon-square">
+                                <a href="page2.html"><img src="image/play-icon.png" alt="Запуск видео"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="block">
+                    <div class="footer-block container2">
+                        <div class="inline_block text_perenos">ПРИМЕНЕНИЕ
+                            <p>ИЗУЧЕННОГО МАТЕРИАЛА</div>
+                        <div class="icon-square inline_block">
+                            <button class='button' "open-modal-button" onclick="openModal('<h3>ПРИМЕНЕНИЕ ИЗУЧЕННОГО МАТЕРИАЛА</h3> <br> Текст')"><img src="image/question-mark-icon.png" alt="Знак вопроса"></button>
+                        </div>
+                    </div>
+                    <div class="footer-block">
+                        <img src="image/main2.png" alt="Изображение">
+                        <h1 class="underline">Тема ЭОМ</h1>
+                    </div>
+                    <div class="footer-block">
+                        <div class="icon-square">
+                            <a href="page3.html"><img src="image/play-icon.png" alt="Запуск видео"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="footer-block container2">
+                        <div class="inline_block text_perenos">ДИАГНОСТИКА ПРИОБРЕТЕННЫХ ЗНАНИЙ, УМЕНИЙ, НАВЫКОВ</div>
+                        <div class="icon-square inline_block">
+                            <button class='button' "open-modal-button" onclick="openModal('<h3>ДИАГНОСТИКА ПРИОБРЕТЕННЫХ ЗНАНИЙ, УМЕНИЙ, НАВЫКОВ</h3> <br> Текст')"><img src="image/question-mark-icon.png" alt="Знак вопроса"></button>
+                        </div>
+                    </div>
+                    <div class="footer-block">
+                        <img src="image/main3.png" alt="Изображение">
+                        <h1 class="underline">Тема ЭОМ</h1>
+                    </div>
+                    <div class="footer-block">
+                        <div class="icon-square">
+                            <a href="page4.html"><img src="image/play-icon.png" alt="Запуск видео"></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="footer-block">
-            <img src="image/main3.png" alt="Изображение">
-            <h1 class="underline">Тема ЭОМ</h1>
-        </div>
-        <div class="footer-block">
-            <div class="icon-square">
-                <a href="page4.html"><img src="image/play-icon.png" alt="Запуск видео"></a>
-            </div>
-        </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer-border">
-          <footer>
+    </main>
+
+    <!-- <div class="footer-border">
+        <footer>
             <div class="footer-left">
                 <img src="image/footer.png" width="75" height="75">
                 <div class="footer-text">
-                      Туризм и сфера услуг
+                    Туризм и сфера услуг
                 </div>
             </div>
             <div class="footer-right">
@@ -102,9 +137,25 @@
                     <span class="white-text">Цифровой образовательный контент</span>
                 </div>
             </div>
-          </footer>
+        </footer>
+    </div> -->
+
+    <footer>
+        <div class="footer_block container">
+            <div class="footer_text_container">
+                <img src="image/camp.png" alt="">
+                <div class="">
+                    Туризм и сфера услуг
+                </div>
+            </div>
+            <div class="footer_button">
+                <p>
+                    Цифровой<br> образовательный контент
+                </p>
+            </div>
         </div>
-    </div>
+    </footer>
+
 
     <div class="button_hint_parent" id="button_hint_parent">
         <div class="button_hint">
@@ -114,4 +165,5 @@
     </div>
 
 </body>
+
 </html>
