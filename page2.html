@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/page2.css">
+    <script src="JS/main.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -32,17 +34,18 @@
                     Организация процессов приготовления, подготовки к реализации горячих блюд, кулинарных изделий и закусок сложного ассортимента
                 </p>
             </div>
-            <div class="header_block header_button" id="header_block3">
+            <button class="header_block header_button" id="header_block3" onclick="openButtonHint('<h4>Ключевые слова</h4>Блок тест Блок тест Блок теwст sБлок тест Блок тasdст Блок тест Блок тест Блок тест Блок тест Блок тест Блокeqr тест Блок тестer Блок тест Блок тест ')">
                 <p>
-                    Ключевые <br>
-                    слова
+                    Ключевые
+                    <br> слова
                 </p>
-            </div>
-            <div class="header_block header_button" id="header_block4">
+            </button>
+            <button class="header_block header_button" id="header_block4" onclick="openButtonHint('<h4>Информация о контенте</h4>Блок тест Блок тест Блок теwст sБлок тест Блок тasdст Блок тест Блок тест Блок тест Блок тест Блок тест Блокeqr тест Блок тестer Блок тест Блок тест ')">
                 <p>
-                    Информация <br> о контенте
+                    Информация
+                    <br> о контенте
                 </p>
-            </div>
+            </button>
         </div>
     </header>
 
@@ -68,16 +71,11 @@
         <video class="main_video" src="videos/ЭТО ВИДЕО ЛОМАЕТ ЮТУБ.mp4" preload="auto" controls autoplay loop playsinline muted/>
     </main>
 
-    <!-- <footer>
-        <div class="foolter_block container">
-            <div class="footer_text_container">
-                <img src="image/camp.png" alt="">
-                <div class="">
-                    Туризм и сфера услуг
-                </div>
-            </div>
-            <div class="footer_button"></div>
+    <div class="button_hint_parent" id="button_hint_parent">
+        <div class="button_hint">
+            <p id="button_hint_p"></p>
+            <button onclick="closeButtonHint()">Закрыть</button>
         </div>
-    </footer> -->
+    </div>
 </body>
 </html>
