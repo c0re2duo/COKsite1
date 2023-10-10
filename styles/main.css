@@ -26,79 +26,6 @@ a {
 }
 
 
-/* .header {
-    background-color: white;
-    padding: -20px;
-    display: flex;
-    justify-content: space-between; /* Расположение блоков по краям
-    align-items: center; /* Выравнивание по центру вертикально
-    border-radius: 20px;
-}
-
-
-/* .header-border {
-    background-color: white;
-	border: 5px solid var(--main-color);
-    border-radius: 20px;
-    padding: 3px;
-	margin: 15px;
-}
-
-.header h1 {
-    color: #000000;
-}
-
-.header-block-left {
-    background-color: var(--main-color);
-    border-radius: 20px;
-    padding: 20px 30px; Уменьшил внутренний отступ
-    margin-left: -10%;
-    width: 160px; /* Задал определенную ширину блоков
-    white-space: normal; /* Перенос текста на новую строку
-    text-align: center;
-}
-
-.underline {
-	text-decoration: underline black;
-	color: black; /* Цвет текста
-}
-
-.header-block-right {
-    background-color: var(--main-color);
-    border-radius: 20px;
-    padding: 20px 30px; /* Уменьшил внутренний отступ
-    margin-right: 100px;
-    width: 160px; /* Задал определенную ширину блоков
-    white-space: normal; /* Перенос текста на новую строку
-    text-align: center;
-}
-
-#header_vertical_line {
-    margin-left: -2%;
-    height: 70px;
-    border: 2px solid var(--main-color);
-}
-
-.header-left-block {
-    background-color: white;
-    padding: 10px 15px;
-    margin-left: 2%;
-    width: 10%;
-    white-space: normal;
-    min-width: 9%;
-}
-
-.header-right-block {
-    background-color: white;
-    padding: 10px 15px;
-    margin-right: 50rem;
-    width: 20%;
-    white-space: normal;
-    min-width: 19%;
-} */
-
-
-
 header {
   border: 5px solid var(--main-color);
   border-radius: 20px;
@@ -148,7 +75,7 @@ header {
 
 
 #header_block1 {
-    width: 30%;
+    width: 26%;
     height: 100%;
     font-size: 21px;
     padding-left: 15px;
@@ -157,7 +84,7 @@ header {
 
 
 #header_block2 {
-    width: 47%;
+    width: 35%;
     height: 100%;
     vertical-align: middle;
     margin-right: 1%;
@@ -243,58 +170,6 @@ footer {
 }
 
 
-
-/* .footer-border {
-    background-color: white; /* Белый фон блока *
-    border: 5px solid var(--main-color);/* Зеленая окантовка *
-    border-radius: 20px;
-    padding: 15px;
-    margin: 10px;
-}
-
-.footer {
-    background-color: white;
-    padding: 20px;
-    display: flex;
-    align-items: center; /* Выравнивание по вертикали *
-    justify-content: space-between; /* Расположение элементов справа *
-}
-
-.footer-text {
-    font-weight: bold;
-    margin-top: -55px;
-    margin-left: 70px; /* Отступ слева от текста *
-    font-size: 40px;
-}
-
-.footer-left {
-    flex: 1; /* Делаем левый блок растягивающимся *
-    margin-bottom: -50px;
-    }
-
-    img {
-            vertical-align: middle;; /* Устанавливаем вертикальное выравнивание по середине *
-}
-
-.footer-right {
-    display: flex;
-    align-items: center;
-}
-
-.green-block {
-    background-color: var(--main-color);
-    border-radius: 10px;
-    padding: 15px 20px;
-    text-align: right;
-    margin-top: -12px;
-}
-
-.white-text {
-    color: white
-} */
-
-
-
 .button_hint_parent {
     display: none;
     width: 100%;
@@ -331,6 +206,8 @@ footer {
 
 .theme_container {
     margin-top: 10px;
+    height: 200px;
+    align-items: center;
 }
 
 
@@ -357,7 +234,7 @@ footer {
 
 
 .to_main_top_block {
-    height: 80px;
+    height: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
