@@ -81,53 +81,6 @@
     cursor: pointer;
 }
 
-.main-block-left {
-    background-color: var(--main-color);
-    border-radius: 10px;
-    padding: 11px 30px; /* Уменьшил внутренний отступ */
-    width: 190px; /* Задал определенную ширину блоков */
-    white-space: normal; /* Перенос текста на новую строку */
-    text-align: center;
-}
-.main-left {
-    margin-left: 50px;
-    width: 20%;
-}
-
-.main-right {
-    float: right;
-    width: 80%;
-    text-align: center;
-    margin-top: -8%;
-    font-size: 20px;
-    height: 140px;
-}
-
-.main {
-    width: 97%;
-    margin-left: 50px;
-}
-
-ul {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-}
-
-li {
-    list-style: none; /* Убираем маркеры списка */
-    margin-right: 10px; /* Отступ между блоками */
-    border: 4px solid var(--main-color);
-    padding: 11px 15px;
-    border-radius: 7px;
-    margin-top: 25px;
-    font-size: 20px;
-    color: var(--main-color);
-}
-
-.main-center {
-    margin-left: 70px;
-}
 
 .modal {
     display: none; /* По умолчанию скрыто */
@@ -151,40 +104,6 @@ li {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-}
-
-
-.button_hint_parent {
-    display: none;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    overflow: auto;
-}
-
-.button_hint {
-    width: 600px;
-    height: 400px;
-    position: fixed;
-    top: 30%;
-    left: 63%;
-    margin: -125px 0 0 -125px;
-    border: 2px solid var(--main-color);
-    border-radius: 15px;
-    background-color: white;
-    text-align: center;
-	transition: opacity 2s ease;
-	animation: ani 0.3s forwards;
-}
-
-
-.button_hint p {
-    font-size: 20px;
-}
-
-
-.button_hint button {
-    font-size: 20px;
 }
 
 
