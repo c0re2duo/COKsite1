@@ -179,8 +179,8 @@ footer {
 }
 
 .button_hint {
-    width: 600px;
-    height: 400px;
+    width: 700px;
+    height: 700px;
     position: fixed;
     top: 30%;
     left: 63%;
@@ -188,11 +188,45 @@ footer {
     border: 2px solid var(--main-color);
     border-radius: 15px;
     background-color: white;
-    text-align: center;
+    text-align: left;
 	transition: opacity 2s ease;
 	animation: ani 0.3s forwards;
+	padding: 15px;
 }
 
+.close {
+	position: fixed;	
+	width: 40px;
+	height: 35px;
+	top: 17%;
+	right: 5%;
+	border-radius: 10px 0 10px 0;
+	border: 3px solid var(--main-color);
+	cursor: pointer;
+	transition: box-shadow 0.5s, color 0.5s; /* Анимация при наведении */
+}
+
+.close:hover {
+    color: red; /* Новый цвет текста при наведении */
+    box-shadow: 0 0 10px #ff5722; /* Эффект "подсветки" при наведении */
+}
+
+.close-main {
+	position: fixed;	
+	width: 40px;
+	height: 35px;
+	top: 23%;
+	right: 24.5%;
+	border-radius: 10px 0 10px 0;
+	border: 3px solid var(--main-color);
+	cursor: pointer;
+	transition: box-shadow 0.5s, color 0.5s; /* Анимация при наведении */
+}
+
+.close-main:hover {
+	color: red; /* Новый цвет текста при наведении */
+    box-shadow: 0 0 10px #ff5722; /* Эффект "подсветки" при наведении */
+}
 
 .button_hint p {
     font-size: 20px;
