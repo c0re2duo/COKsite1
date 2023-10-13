@@ -15,6 +15,7 @@ function closeModal(id) {
 
 function openButtonHint(hint) {
 	var button_hint_parent = document.getElementById("button_hint_parent");
+	console.log(button_hint_parent)
 	button_hint_parent.style.display = "block";
 	var button_hint_p = document.getElementById('button_hint_p');
 	button_hint_p.innerHTML = hint;
