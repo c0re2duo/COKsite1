@@ -194,25 +194,35 @@ footer {
 	padding: 15px;
 }
 
-.close {
-	position: fixed;	
+button.close_hint {
 	width: 40px;
 	height: 35px;
-	top: 17%;
-	right: 5%;
-	border-radius: 10px 0 10px 0;
+	border-radius: 0px 10px 0px 0;
 	border: 3px solid var(--main-color);
 	cursor: pointer;
-	transition: box-shadow 0.5s, color 0.5s; /* Анимация при наведении */
 }
 
+
+.close_button_parent {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
 .close:hover {
-    color: red; /* Новый цвет текста при наведении */
-    box-shadow: 0 0 10px #ff5722; /* Эффект "подсветки" при наведении */
+    color: red;
+    box-shadow: 0 0 10px #ff5722;
 }
 
 .close-main {
-	position: fixed;	
+	position: fixed;
 	width: 40px;
 	height: 35px;
 	top: 23%;
@@ -220,12 +230,12 @@ footer {
 	border-radius: 10px 0 10px 0;
 	border: 3px solid var(--main-color);
 	cursor: pointer;
-	transition: box-shadow 0.5s, color 0.5s; /* Анимация при наведении */
+	transition: box-shadow 0.5s, color 0.5s; /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
 }
 
 .close-main:hover {
-	color: red; /* Новый цвет текста при наведении */
-    box-shadow: 0 0 10px #ff5722; /* Эффект "подсветки" при наведении */
+	color: red; /* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
+    box-shadow: 0 0 10px #ff5722; /* пїЅпїЅпїЅпїЅпїЅпїЅ "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ" пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
 }
 
 .button_hint p {
