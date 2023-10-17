@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/page4.css">
     <script src="JS/main.js"></script>
+    <script src="JS/test.js"></script>
 </head>
 <body>
 
@@ -118,8 +119,22 @@
     				<li>15</li>
     			</ul>
             </div>
+
+        <div id="question">
+            <p id="question_text"><strong>Текст вопроса</strong></p>
+            <ul id="questions_ul">
+
+            </ul>
+        </div>
+        <li class="option">
+            <input type="radio" name="questionType" id="text">
+            <label for="text">Вариант ответа</label>
+        </li>
+        <button onclick="nextQuestion()">Далее</button>
+        <button onclick="endTest()">Завершить</button>
+
     </main>
-    
+
     <div class="button_hint_parent" id="button_hint_parent">
         <div class="button_hint">
             <div class="close_button_parent">
