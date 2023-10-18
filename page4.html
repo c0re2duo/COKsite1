@@ -72,53 +72,16 @@
             </div>
         </div>
 
-    	<div class="button_list">
-    			 <ul>
-    				<li>1</li>
-    			</ul>
-    			<ul>
-    				<li>2</li>
-    			</ul>
-    			<ul>
-    				<li>3</li>
-    			</ul>
-    			 <ul>
-    				<li>4</li>
-    			</ul>
-    			<ul>
-    				<li>5</li>
-    			</ul>
-    			<ul>
-    				<li>6</li>
-    			</ul>
-    			 <ul>
-    				<li>7</li>
-    			</ul>
-    			 <ul>
-    				<li>8</li>
-    			</ul>
-    			<ul>
-    				<li>9</li>
-    			</ul>
-    			<ul>
-    				<li>10</li>
-    			</ul>
-    			 <ul>
-    				<li>11</li>
-    			</ul>
-    			<ul>
-    				<li>12</li>
-    			</ul>
-    			<ul>
-    				<li>13</li>
-    			</ul>
-    			 <ul>
-    				<li>14</li>
-    			</ul>
-    			 <ul>
-    				<li>15</li>
-    			</ul>
-            </div>
+    	<div id="button_list" class="button_list">
+
+        </div>
+        <ul class="question_number">
+            <li class="question_number_li">1</li>
+        </ul>
+
+        <div class="test_results">
+            <p id="test_results_p"></p>
+        </div>
 
         <div id="question">
             <br><p class="questions" id="question_text">Текст вопроса</p>
@@ -130,8 +93,8 @@
             <input type="radio" name="questionType" id="text">
             <label for="text">Вариант ответа</label>
         </li>
-        <button onclick="nextQuestion()">Далее</button>
-        <button onclick="endTest()">Завершить</button>
+        <button id='next_question' onclick="nextQuestion()">Далее</button>
+        <button id='finish_test' onclick="endTest()">Завершить</button>
 
     </main>
 

@@ -62,3 +62,23 @@ li {
 	background-color: var(--main-color);
 	box-shadow: 0 0 15px var(--main-color);
 }
+
+
+#next_question {
+    display: block;
+}
+
+
+#finish_test {
+    display: none;
+}
+
+
+.test_results {
+    display: none;
+}
+
+
+.question_number {
+    display: none;
+}
