@@ -115,8 +115,10 @@ label {
 
 #question {
 	margin: 0 15%;
+    /* display: flex;
+    justify-content: center; */
 }
 
 input[type="radio"] {
-    padding-top: 100px; /* Скрываем саму радиокнопку */
+    padding-top: 100px;
 }
