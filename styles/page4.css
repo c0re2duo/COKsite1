@@ -140,13 +140,16 @@ label {
 }
 
 
-#step_content img {
+#step_content img { /* стиль картинки */
     width: 50%;
+	border: 2px solid var(--main-color);
+	border-radius: 10px;
 }
 
 
-#step_content p {
+#step_content p { /* стиль текста */
     width: 50%;
+	margin: 0 10px;
 }
 
 
@@ -158,4 +161,8 @@ input[type="radio"] {
 .test_buttons {
     display: flex;
     justify-content: center;
+}
+
+#step_content {
+	padding-top: 10px; 
 }
