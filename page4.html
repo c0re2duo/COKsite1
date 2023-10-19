@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/page4.css">
+    <script src="JS/main.js"></script>
+    <script src="JS/test.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="header_container container">
+            <div class="header_block" id="header_block1">
+                <p>
+                    <b>
+                        <u>
+                            ПМ.01
+                        </u>
+                    </b>
+                    <br> Обслуживание потребителей организаций общественного питания
+                </p>
+            </div>
+            <div id="header_vertical_line"></div>
+            <div class="header_block" id="header_block2">
+                <p>
+                    <b>
+                        <u>
+                            МДК.01.01.
+                        </u>
+                    </b>
+                    <br> Обслуживание потребителей организаций общественного питания
+                </p>
+            </div>
+            <button class="header_block header_button" id="header_block3" onclick="openButtonHint('<h3>Ключевые слова</h3><b>Услуга общественного питания</b> – результат деятельности предприятий общественного питания по удовлетворению потребностей потребителя в продукции общественного питания. <br><b>Процесс обслуживания</b> – совокупность операций/действий, выполняемых исполнителем услуг общественного питания при непосредственном контакте с потребителем услуги в процессе реализации и/или организации потребления продукции общественного питания или организации досуга. <br><b>Условия обслуживания</b> – совокупность факторов, воздействующих на потребителя (гостя) в процессе оказания услуг общественного питания. <br><b>Качество услуги</b> – совокупность характеристик услуги, определяющих ее способность удовлетворять реальные и предполагаемые потребности людей. <br><b>Безопасность услуги</b> – комплекс свойств услуги общественного питания, при которых она под влиянием внутренних и внешних опасных (вредных) факторов оказывает воздействие на потребителя, не подвергая его жизнь, здоровье и имущество риску. <br><b>Экологичность продукции</b> – комплекс свойств продукции, услуг, которые позволяют оказывать воздействие на окружающую среду, не подвергая ее риску. <br><b>Метод обслуживания потребителей</b> – способ реализации потребителям продукции общественного питания и организации ее потребления. <br><b>Форма обслуживания потребителей</b> – организационный прием, представляющий собой разновидность или сочетание методов обслуживания потребителей. <br><b>Меню</b> — это перечень закусок, блюд, напитков, мучных изделий, имеющихся в продаже на данный день, с указанием выхода и цены.')">
+                <p>
+                    Ключевые
+                    <br> слова
+                </p>
+            </button>
+            <button class="header_block header_button" id="header_block4" onclick="openButtonHint('<h4>Информация о контенте</h4>Блок тест Блок тест Блок теwст sБлок тест Блок тasdст Блок тест Блок тест Блок тест Блок тест Блок тест Блокeqr тест Блок тестer Блок тест Блок тест ')">
+                <p>
+                    Информация
+                    <br> о контенте
+                </p>
+            </button>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="theme_container container">
+            <div class="theme_block to_main" id="to_main_block">
+                <div class="to_main_top_block">
+                    <img src="image/magnifier.png" alt="">
+                    <p>ПОДГОТОВКА ПЕРСОНАЛА К ОБСЛУЖИВАНИЮ
+                    </p>
+                </div>
+                <a href="index.html">
+                    <div class="to_main_button">
+                        На главную
+                    </div>
+                </a>
+            </div>
+            <div class="theme_block theme" id="theme_block">
+                <p>
+                    <u>Тема:</u> Подготовка организации питания к обслуживанию
+                </p>
+            </div>
+        </div>
+
+    	<div id="button_list" class="button_list">
+
+        </div>
+        <ul class="question_number">
+            <li class="question_number_li">1</li>
+        </ul>
+
+        <div class="test_results">
+            <p id="test_results_p"></p>
+        </div>
+
+        <div id="question">
+            <br><p class="questions" id="question_text">Текст вопроса</p>
+            <ul class="question_list" id="questions_ul">
+            </ul>
+        </div>
+        <li class="option">
+            <input type="radio" name="questionType" id="text">
+            <label for="text">Вариант ответа</label>
+        </li>
+        <button id='next_question' onclick="nextQuestion()">Далее</button>
+        <button id='finish_test' onclick="endTest()">Завершить</button>
+
+    </main>
+
+    <div class="button_hint_parent" id="button_hint_parent">
+        <div class="button_hint">
+            <div class="close_button_parent">
+                <button class="close_hint" onclick="closeButtonHint()">Х</button>
+            </div>
+            <p id="button_hint_p"></p>
+        </div>
+    </div>
+
+</body>
+</html>

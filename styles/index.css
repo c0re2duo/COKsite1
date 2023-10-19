@@ -1,0 +1,123 @@
+.size {
+  font-size: 20px;
+}
+/* fix */
+.content {
+    text-align: center;
+    /* margin-top: %; */
+    /* margin-bottom: -1%; */
+    font-size: 27px;
+}
+
+.blocks-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: white;
+    height: 100%;
+}
+
+.block {
+    background-color: white; /* Белый фон блока */
+    border: 10px solid var(--main-color); /* Зеленая окантовка */
+    border-radius: 80px 0px;
+    height: 25rem;
+    width: 21rem;
+    margin: 10px 5% 3%;
+}
+
+.footer-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    word-wrap: break-word;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.icon-square {
+    background-color: white;
+    border: 3px solid var(--main-color);
+    border-radius: 10px;
+    width: 50px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-square img {
+    width: 25px;
+    height: 30px;
+    margin-top: 4px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.container2 {
+    display: inline;
+    width: 100%;
+}
+
+.inline_block {
+    display: inline-block;
+    margin-left: 25px;
+    margin-top: 20px;
+}
+
+.text_perenos {
+    word-wrap: break-word;
+    width: 50%;
+}
+
+.button {
+    border: medium none;
+    background-image: none;
+    background: transparent;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+.modal {
+    display: none; /* По умолчанию скрыто */
+    position: fixed;
+    margin: -15rem -100px;
+    width: 60rem;
+    height: 30rem;
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон */
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+	border-radius: 10px;
+	font-size: 15px;
+	border: 2px solid var(--main-color);
+	transition: opacity 2s ease;
+	animation: ani 0.3s forwards;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+@keyframes ani {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+
+.main_container {
+    height: auto;
+    min-width: 10%;
+    align-items: center;
+    /* padding: 6%; */
+    flex-grow: 1;
+    flex-direction: column;
+}

@@ -1,0 +1,34 @@
+:root {
+    --main-color: #008164;
+}
+
+
+html {
+    display: table;
+    margin: 30px auto;
+}
+
+
+body {
+    /* margin-top: 10px; */
+    width: 1280px;
+    display: table-cell;
+    vertical-align: middle;
+
+
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+.main_video {
+    margin: 15px 0px;
+    width: 100%;
+    height: 700px;
+    border: 2px solid var(--main-color)
+}
