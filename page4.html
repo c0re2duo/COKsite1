@@ -87,13 +87,14 @@
             <p class="questions" id="question_text">Текст вопроса</p>
             <ul class="question_list" id="questions_ul">
             </ul>
-        </div>
         <li class="option">
             <input type="radio" name="questionType" id="text">
             <label for="text">Вариант ответа</label>
         </li>
-        <button id='next_question' onclick="nextQuestion()">Далее</button>
-        <button id='finish_test' onclick="endTest()">Завершить</button>
+        <div class="test_buttons">
+            <button id='next_question' onclick="nextQuestion()">Далее</button>
+            <button id='finish_test' onclick="endTest()">Завершить</button>
+        </div>
 
     </main>
 
