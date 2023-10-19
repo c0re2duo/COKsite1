@@ -6,7 +6,6 @@ ul {
     display: inline-block;
     margin: 0;
     padding: 0;
-	
 }
 
 li {
@@ -37,7 +36,8 @@ li {
     height: 50px; /* Задаем высоту блока */
 	display: flex; /* Используем flex-контейнер для ряда */
     justify-content: space-between; /* Распределяем блоки по ширине ряда */
-}
+    font-size: 50px;
+    color: var(--main-color);
 
 .question_list {
 	max-height: 10%;
