@@ -180,7 +180,7 @@ function endTest() {
     results_div = document.getElementsByClassName('test_results')[0]
     results_div.style.display = 'block'
     test_results_p = document.getElementById('test_results_p');
-    test_results_p.innerHTML = 'Ваш результат: ' + score
+    test_results_p.innerHTML = 'Количество правильных ответов: ' + score
 
     document.getElementById('question').style.display = 'none'
     document.getElementById('finish_test').style.display = 'none'
