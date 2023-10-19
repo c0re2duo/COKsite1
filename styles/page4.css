@@ -111,6 +111,7 @@ li {
 .test_results {
     display: none;
     text-align: center;
+	font-size: 25px;
 }
 
 
