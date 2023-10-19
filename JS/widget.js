@@ -1,48 +1,13 @@
-const questions = {
-    "1": {
-    "text": "Второй вопрос?",
-    "type": "question",
-    "options": [
-      {
-        "text": "Да",
-        "correct": false
-      },
-      {
-        "text": "Нет",
-        "correct": false
-      },
-      {
-        "text": "Возможно",
-        "correct": false
-      },
-      {
-        "text": "Ъхэ",
-        "correct": true
+const questions = {"1": {
+    "text": "Текст слайда",
+    "type": "step",
+    "img_path": "image/test_img1.jpg",
+    },
+"2": {
+      "text": "Текст слайда 2",
+      "type": "step",
+      "img_path": "image/gosling.jpeg",
       }
-    ]
-  },
-  "2": {
-    "text": "Ачу?",
-    "type": "question",
-    "options": [
-      {
-        "text": "Аничу",
-        "correct": false
-      },
-      {
-        "text": "Аничу на",
-        "correct": true
-      },
-      {
-        "text": "Нормально общайся",
-        "correct": false
-      },
-      {
-        "text": "Ъхэ",
-        "correct": false
-      }
-    ]
-}
 }
 
 var score = 0;

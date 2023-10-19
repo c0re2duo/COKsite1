@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="styles/main.css">
-	<link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="styles/page3.css">
+	<!-- <link rel="stylesheet" href="styles/index.css"> -->
+    <link rel="stylesheet" href="styles/page4.css">
+    <link rel="stylesheet" href="styles/widget.css">
     <script src="JS/main.js"></script>
+    <script src="JS/widget.js"></script>
 </head>
 <body>
 
@@ -72,39 +74,43 @@
 
 
 <div class="main">
-	<!-- <div class="main-left">
-		<div>
-		  <p><img src="image/page3.main.png"></p>
-		</div>
-		<div class="main-block-left">
-			<a href="index.html"><button class='button'><span class="header-block-text">На главную</span></button></a>
-		</div>
-	</div>
-	<div class="main-right">
-		<h1><u>Тема:</u> Характеристика процессов приготовления, подготовки к реализации горячих блюд, кулинарных изделий и закусок сложного ассортимента</h1>
-	</div> -->
-	<div class="main-center">
-			 <ul>
-				<li>1</li>
-			</ul>
-			<ul>
-				<li>2</li>
-			</ul>
-			<ul>
-				<li>3</li>
-			</ul>
-			 <ul>
-				<li>4</li>
-			</ul>
-			<ul>
-				<li>5</li>
-			</ul>
-			<ul>
-				<li>6</li>
-			</ul>
-			 <ul>
-				<li>7</li>
-			</ul>
+
+    <div id="button_list" class="button_list">
+
+    </div>
+    <ul class="question_number">
+        <li class="question_number_li">1</li>
+    </ul>
+
+    <div class="test_results">
+        <p id="test_results_p"></p>
+    </div>
+
+    <div id="slide">
+
+        <div id="question">
+            <p class="questions" id="question_text">Текст вопроса</p>
+            <ul class="question_list" id="questions_ul">
+            </ul>
+            <li class="option">
+                <input type="radio" name="questionType" id="text">
+                <label for="text">Вариант ответа</label>
+            </li>
+        </div>
+
+        <div id="step">
+            <div id="step_content">
+                <img id="slide_img" src="" alt="Фото слайда">
+                <p id="slide_p"></p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="test_buttons">
+        <button id='next_question' onclick="nextSlide()">Далее</button>
+        <button id='finish_test' onclick="endTest()">Завершить</button>
+    </div>
 
 	</div>
 </div>
