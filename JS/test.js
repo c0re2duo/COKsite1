@@ -1,5 +1,11 @@
 const questions = {"1": {
+    "text": "Текст слайда",
+    "type": "step",
+    "img_path": "image/test_img1.jpg",
+    },
+    "2": {
     "text": "Как зовут Эльдара?",
+    "type": "question",
     "options": [
       {
         "text": "Эльдар",
@@ -19,8 +25,9 @@ const questions = {"1": {
       }
     ]
   },
-  "2": {
+  "3": {
     "text": "Второй вопрос?",
+    "type": "question",
     "options": [
       {
         "text": "Да",
@@ -40,8 +47,9 @@ const questions = {"1": {
       }
     ]
   },
-  "3": {
+  "4": {
     "text": "Ачу?",
+    "type": "question",
     "options": [
       {
         "text": "Аничу",
@@ -60,49 +68,12 @@ const questions = {"1": {
         "correct": false
       }
     ]
-  },
-  "4": {
-    "text": "Вопрос 4",
-    "options": [
-      {
-        "text": "1",
-        "correct": false
-      },
-      {
-        "text": "2",
-        "correct": true
-      },
-      {
-        "text": "3",
-        "correct": false
-      },
-      {
-        "text": "4",
-        "correct": false
+},
+"5": {
+      "text": "Текст слайда 2",
+      "type": "step",
+      "img_path": "image/gosling.jpeg",
       }
-    ]
-  },
-  "5": {
-    "text": "ФВфв",
-    "options": [
-      {
-        "text": "1",
-        "correct": false
-      },
-      {
-        "text": "2",
-        "correct": true
-      },
-      {
-        "text": "3",
-        "correct": false
-      },
-      {
-        "text": "4",
-        "correct": false
-      }
-    ]
-  }
 }
 
 var score = 0;
@@ -112,7 +83,7 @@ var button_list
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    setQuestion(1);
+    setSlide(1);
     button_list = document.getElementById('button_list');
     updateQuestionNumber(1)
 });
@@ -145,7 +116,7 @@ function updateQuestionNumber(question_number) {
 }
 
 
-function setQuestion(number) {
+function setSlide(number) {
     number = Number(number);
     console.log('Setting question ' + number);
 
@@ -157,38 +128,62 @@ function setQuestion(number) {
         // console.log('Yes')
         document.getElementById('next_question').style.display = 'none'
         document.getElementById('finish_test').style.display = 'block'
+
+        var step_tag = document.getElementById("step");
+        step_tag.setAttribute('question_number', number);
     }
     // else {
         // console.log('No')
-    var question_tag = document.getElementById("question");
-    question_tag.setAttribute('question_number', number);
-    p = document.getElementById('question_text');
-    p.innerHTML = question['text'];
 
-    var questions_ul = document.getElementById('questions_ul');
-    questions_ul.innerHTML = '';
+    var slide_tag = document.getElementById("slide");
+    slide_tag.setAttribute('slide_number', number);
 
-    for (let option_index in question['options']) {
-            const option = question['options'][option_index];
-            const clonedOption = originalOption.cloneNode(true);
-            questions_ul.appendChild(clonedOption);
-            var option_id = "option" + option_index;
-            label_tag = clonedOption.getElementsByTagName('label')[0];
-            label_tag.innerHTML = option['text'];
-            label_tag.setAttribute('for', option_id);
-            input_tag = clonedOption.getElementsByTagName('input')[0];
-            input_tag.setAttribute('correct', option['correct']);
-            input_tag.id = option_id;
-            input_tag.checked = false;
-        }
+    if (question['type'] == 'step') {
+        console.log('STEP')
+
+        var step_tag = document.getElementById('step').style.display = 'block'
+        document.getElementById('question').style.display = 'none'
+
+        document.getElementById('slide_img').src = question['img_path']
+        document.getElementById('slide_p').innerHTML = question['text']
+    }
+    else if (question['type'] == 'question') {
+        console.log('QUESTION')
+
+        document.getElementById('step').style.display = 'none'
+        document.getElementById('question').style.display = 'block'
+
+        var question_tag = document.getElementById("question");
+
+        p = document.getElementById('question_text');
+        p.innerHTML = question['text'];
+
+        var questions_ul = document.getElementById('questions_ul');
+        questions_ul.innerHTML = '';
+
+        for (let option_index in question['options']) {
+                const option = question['options'][option_index];
+                const clonedOption = originalOption.cloneNode(true);
+                questions_ul.appendChild(clonedOption);
+                var option_id = "option" + option_index;
+                label_tag = clonedOption.getElementsByTagName('label')[0];
+                label_tag.innerHTML = option['text'];
+                label_tag.setAttribute('for', option_id);
+                input_tag = clonedOption.getElementsByTagName('input')[0];
+                input_tag.setAttribute('correct', option['correct']);
+                input_tag.id = option_id;
+                input_tag.checked = false;
+                clonedOption.style.display = 'block'
+            }
+    }
+
     originalOption.style.display = 'none'
-    // }
 
 
 }
 
 
-function nextQuestion() {
+function nextSlide() {
     var question_tag = document.getElementById('question');
     // console.log(question_tag)
     var options = question_tag.getElementsByTagName('input');
@@ -200,15 +195,19 @@ function nextQuestion() {
             break;
         }
     }
-    var question_number = Number(question_tag.getAttribute('question_number'));
-    next_question_number = question_number + 1;
-    setQuestion(next_question_number);
-    updateQuestionNumber(next_question_number);
+
+    var step_tag = document.getElementById("slide");
+    var slide_number = Number(step_tag.getAttribute('slide_number'));
+
+    console.log('Slide number ' + slide_number)
+
+    var next_slide_number = slide_number + 1;
+    setSlide(next_slide_number);
+    updateQuestionNumber(next_slide_number);
 }
 
 
 function endTest() {
-    // alert('Количество правильных ответов: ' + score);
     results_div = document.getElementsByClassName('test_results')[0]
     results_div.style.display = 'block'
     test_results_p = document.getElementById('test_results_p');
@@ -216,4 +215,5 @@ function endTest() {
 
     document.getElementById('question').style.display = 'none'
     document.getElementById('finish_test').style.display = 'none'
+    document.getElementById('step').style.display = 'none'
 }

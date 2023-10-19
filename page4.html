@@ -83,16 +83,29 @@
             <p id="test_results_p"></p>
         </div>
 
-        <div id="question">
-            <p class="questions" id="question_text">Текст вопроса</p>
-            <ul class="question_list" id="questions_ul">
-            </ul>
-        <li class="option">
-            <input type="radio" name="questionType" id="text">
-            <label for="text">Вариант ответа</label>
-        </li>
+        <div id="slide">
+
+            <div id="question">
+                <p class="questions" id="question_text">Текст вопроса</p>
+                <ul class="question_list" id="questions_ul">
+                </ul>
+                <li class="option">
+                    <input type="radio" name="questionType" id="text">
+                    <label for="text">Вариант ответа</label>
+                </li>
+            </div>
+
+            <div id="step">
+                <div id="step_content">
+                    <img id="slide_img" src="" alt="Фото слайда">
+                    <p id="slide_p"></p>
+                </div>
+            </div>
+
+        </div>
+
         <div class="test_buttons">
-            <button id='next_question' onclick="nextQuestion()">Далее</button>
+            <button id='next_question' onclick="nextSlide()">Далее</button>
             <button id='finish_test' onclick="endTest()">Завершить</button>
         </div>
 

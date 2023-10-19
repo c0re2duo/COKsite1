@@ -120,15 +120,34 @@ li {
 
 
 label {
-    display: block;
+    /* display: block; */
     margin: 5px 5px;
     cursor: pointer;
 }
 
 #question {
+    display: none;
 	margin: 0 15%;
     text-align: center;
 }
+
+#step_content {
+    /* display: block; */
+    display: flex;
+    justify-content: align-items;
+    margin: 20px 0px;
+}
+
+
+#step_content img {
+    width: 50%;
+}
+
+
+#step_content p {
+    width: 50%;
+}
+
 
 input[type="radio"] {
     padding-top: 100px;
