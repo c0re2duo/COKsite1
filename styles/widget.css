@@ -139,13 +139,20 @@ label {
 }
 
 
-#step_content img {
-   width: 50%;
+#step_content img { /* стиль картинки */
+    width: 50%;
+	height: 50%;
+	border: 2px solid var(--main-color);
+	border-radius: 10px;
 }
 
 
-#step_content p {
-   width: 50%;
+#step_content p { /* стиль текста */
+    width: 80rem;
+	height: 27rem;
+	margin: 0 10px;
+	font-size: 25px;
+	overflow: auto;
 }
 
 

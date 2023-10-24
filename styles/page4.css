@@ -129,7 +129,6 @@ label {
 #question {
     display: none;
 	margin: 0 15%;
-    text-align: center;
 }
 
 #step_content {
@@ -140,17 +139,7 @@ label {
 }
 
 
-#step_content img { /* стиль картинки */
-    width: 50%;
-	border: 2px solid var(--main-color);
-	border-radius: 10px;
-}
 
-
-#step_content p { /* стиль текста */
-    width: 50%;
-	margin: 0 10px;
-}
 
 
 input[type="radio"] {
