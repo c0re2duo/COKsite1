@@ -20,11 +20,6 @@ li {
     color: var(--main-color);
 }
 
-.questions {
-	font-size: 50px;
-	padding: 0;
-	margin: 5% 20% 5%;
-}
 
 .option {
     border: 4px solid var(--main-color);
@@ -140,6 +135,18 @@ label {
 
 
 
+#step_content img { /* ����� �������� */
+    width: 50%;
+	border: 2px solid var(--main-color);
+	border-radius: 10px;
+}
+
+
+#step_content p { /* ����� ������ */
+    width: 50%;
+	margin: 0 10px;
+}
+
 
 
 input[type="radio"] {
@@ -153,5 +160,5 @@ input[type="radio"] {
 }
 
 #step_content {
-	padding-top: 10px; 
+	padding-top: 10px;
 }

@@ -20,10 +20,10 @@ li {
    color: var(--main-color);
 }
 
-.questions {
-   font-size: 50px;
+#question_text {
+   font-size: 40px;
    padding: 0;
-   margin: 5% 20% 5%;
+   margin: 5% 0% 3.5%;
 }
 
 .option {
@@ -127,7 +127,7 @@ label {
 
 #question {
    display: none;
-   margin: 0 15%;
+   margin: 0 0%;
    text-align: center;
 }
 
