@@ -52,7 +52,7 @@ const questions = {
         "correct": false
       },
     ]
-	},  
+	},
 	"4": {
     "text": "Как называется основное блюдо, которое подают перед горячими вторыми блюдами?",
     "type": "question",
@@ -70,7 +70,7 @@ const questions = {
         "correct": true
       },
     ]
-	},  
+	},
 	"5": {
     "text": "В каком порядке следует использовать столовые приборы снаружи к центру стола?",
     "type": "question",
@@ -88,7 +88,7 @@ const questions = {
         "correct": false
       },
     ]
-	},  
+	},
 	"6": {
     "text": "Какой столовый прибор используется для снятия мякоти с орехов?",
     "type": "question",
@@ -106,7 +106,7 @@ const questions = {
         "correct": false
       },
     ]
-	},  
+	},
 	"7": {
     "text": "Какие столовые приборы предназначены для десертов?",
     "type": "question",
@@ -124,7 +124,7 @@ const questions = {
         "correct": false
       },
     ]
-	},  
+	},
 	"8": {
     "text": "Каким образом следует размещать столовые приборы на тарелке при сервировке?",
     "type": "question",
@@ -142,7 +142,7 @@ const questions = {
         "correct": true
       },
     ]
-	},  
+	},
 	"9": {
     "text": 'Что означает термин "рюмка" в контексте сервировки столов?',
     "type": "question",
@@ -160,7 +160,7 @@ const questions = {
         "correct": false
       },
     ]
-	},  
+	},
 	"10": {
     "text": "Какие столовые приборы следует использовать для употребления супов?",
     "type": "question",
@@ -178,7 +178,7 @@ const questions = {
         "correct": true
       },
     ]
-	},  
+	},
 	"11": {
     "text": 'Что такое "столовый набор"?',
     "type": "question",
@@ -196,7 +196,7 @@ const questions = {
         "correct": false
       },
     ]
-	},  
+	},
 	"12": {
     "text": "Какие блюда обычно подают на суповых тарелках?",
     "type": "question",
@@ -214,7 +214,7 @@ const questions = {
         "correct": false
       },
     ]
-	},  
+	},
 	"13": {
     "text": "Какие стандарты организации питания следует учитывать при выборе количества приборов и посуды?",
     "type": "question",
@@ -232,7 +232,7 @@ const questions = {
         "correct": false
       },
     ]
-	},  
+	},
 	"14": {
     "text": "Какие дополнительные элементы декора могут использоваться при сервировке стола?",
     "type": "question",
@@ -250,7 +250,7 @@ const questions = {
         "correct": false
       },
     ]
-	},  
+	},
 	"15": {
     "text": "Какие из перечисленных цветовых гамм наиболее подходят для оформления стола?",
     "type": "question",
@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 function updateQuestionNumber(question_number) {
-    console.log('Update' + question_number)
+    // console.log('Update' + question_number)
 
     originalQuestionNumber = document.getElementsByClassName('question_number')[0];
     button_list.innerHTML = ''
@@ -297,7 +297,7 @@ function updateQuestionNumber(question_number) {
         clonedQuestionNumber.style.display = 'inline-block'
         var question_number_li = clonedQuestionNumber.getElementsByClassName('question_number_li')[0]
         question_number_li.innerHTML = option_index
-        console.log(option_index + ' ' + question_number, option_index == question_number, option_index < question_number)
+        // console.log(option_index + ' ' + question_number, option_index == question_number, option_index < question_number)
         if (option_index == question_number) {
             question_number_li.className = 'question_number_li current'
         }
@@ -313,7 +313,7 @@ function updateQuestionNumber(question_number) {
 
 function setSlide(number) {
     number = Number(number);
-    console.log('Setting question ' + number);
+    // console.log('Setting question ' + number);
 
     originalOption = document.getElementsByClassName('option')[0];
 
@@ -334,7 +334,7 @@ function setSlide(number) {
     slide_tag.setAttribute('slide_number', number);
 
     if (question['type'] == 'step') {
-        console.log('STEP')
+        // console.log('STEP')
 
         var step_tag = document.getElementById('step').style.display = 'block'
         document.getElementById('question').style.display = 'none'
@@ -343,7 +343,7 @@ function setSlide(number) {
         document.getElementById('slide_p').innerHTML = question['text']
     }
     else if (question['type'] == 'question') {
-        console.log('QUESTION')
+        // console.log('QUESTION')
 
         document.getElementById('step').style.display = 'none'
         document.getElementById('question').style.display = 'block'
@@ -403,10 +403,22 @@ function nextSlide() {
 
 
 function endTest() {
+    var question_tag = document.getElementById('question');
+    var options = question_tag.getElementsByTagName('input');
+    for (var j = 0; j < options.length; j++) {
+        var option = options[j];
+        if (option.checked && option.getAttribute('correct') === 'true') {
+            score++;
+            break;
+        }
+        console.log(option.checked)
+    }
+
     results_div = document.getElementsByClassName('test_results')[0]
     results_div.style.display = 'block'
     test_results_p = document.getElementById('test_results_p');
     test_results_p.innerHTML = 'Количество правильных ответов: ' + score
+
 
     document.getElementById('question').style.display = 'none'
     document.getElementById('finish_test').style.display = 'none'

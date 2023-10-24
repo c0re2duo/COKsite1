@@ -316,20 +316,23 @@ function setSlide(number) {
 
 
 function nextSlide() {
-    var question_tag = document.getElementById('question');
-    // console.log(question_tag)
-    var options = question_tag.getElementsByTagName('input');
-    for (var j = 0; j < options.length; j++) {
-        var option = options[j];
-        // console.log(option.getAttribute('correct'));
-        if (option.checked && option.getAttribute('correct') === 'true') {
-            score++;
-            break;
+    var step_tag = document.getElementById("slide");
+    var slide_number = Number(step_tag.getAttribute('slide_number'));
+
+    if (questions[slide_number]['type'] == 'question') {
+        var question_tag = document.getElementById('question');
+        // console.log(question_tag)
+        var options = question_tag.getElementsByTagName('input');
+        for (var j = 0; j < options.length; j++) {
+            var option = options[j];
+            // console.log(option.getAttribute('correct'));
+            if (option.checked && option.getAttribute('correct') === 'true') {
+                score++;
+                break;
+            }
         }
     }
 
-    var step_tag = document.getElementById("slide");
-    var slide_number = Number(step_tag.getAttribute('slide_number'));
 
     console.log('Slide number ' + slide_number)
 
@@ -340,6 +343,17 @@ function nextSlide() {
 
 
 function endTest() {
+    var question_tag = document.getElementById('question');
+    var options = question_tag.getElementsByTagName('input');
+    for (var j = 0; j < options.length; j++) {
+        var option = options[j];
+        if (option.checked && option.getAttribute('correct') === 'true') {
+            score++;
+            break;
+        }
+        console.log(option.checked)
+    }
+
     results_div = document.getElementsByClassName('test_results')[0]
     results_div.style.display = 'block'
     test_results_p = document.getElementById('test_results_p');
