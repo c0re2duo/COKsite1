@@ -33,7 +33,6 @@
     text-align: center;
     word-wrap: break-word;
     font-size: 10px;
-    font-weight: bold;
 }
 
 .icon-square {
@@ -97,13 +96,14 @@
 	border: 2px solid var(--main-color);
 	transition: opacity 2s ease;
 	animation: ani 0.3s forwards;
+	overflow: auto;
 }
 
 .modal-content {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
-    text-align: center;
+    text-align: left;
 }
 
 
