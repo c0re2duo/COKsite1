@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 function updateQuestionNumber(question_number) {
-    console.log('Update' + question_number)
+    // console.log('Update' + question_number)
 
     originalQuestionNumber = document.getElementsByClassName('question_number')[0];
     button_list.innerHTML = ''
@@ -234,7 +234,7 @@ function updateQuestionNumber(question_number) {
         clonedQuestionNumber.style.display = 'inline-block'
         var question_number_li = clonedQuestionNumber.getElementsByClassName('question_number_li')[0]
         question_number_li.innerHTML = option_index
-        console.log(option_index + ' ' + question_number, option_index == question_number, option_index < question_number)
+        // console.log(option_index + ' ' + question_number, option_index == question_number, option_index < question_number)
         if (option_index == question_number) {
             question_number_li.className = 'question_number_li current'
         }
@@ -248,9 +248,37 @@ function updateQuestionNumber(question_number) {
 }
 
 
+function countScore() {
+    var question_tag = document.getElementById('question');
+    // console.log(question_tag)
+    var options = question_tag.getElementsByTagName('input');
+    for (var j = 0; j < options.length; j++) {
+        var option = options[j];
+        // console.log(option.getAttribute('correct'));
+        if (option.checked && option.getAttribute('correct') === 'true') {
+            score++;
+            break;
+        }
+    }
+}
+
+
+function checkOptions() {
+    var question_tag = document.getElementById('question');
+    var options = question_tag.getElementsByTagName('input');
+    for (var j = 0; j < options.length; j++) {
+        var option = options[j];
+        if (option.checked) {
+            return true;
+        }
+    }
+    return false
+}
+
+
 function setSlide(number) {
     number = Number(number);
-    console.log('Setting question ' + number);
+    // console.log('Setting question ' + number);
 
     originalOption = document.getElementsByClassName('option')[0];
 
@@ -271,7 +299,7 @@ function setSlide(number) {
     slide_tag.setAttribute('slide_number', number);
 
     if (question['type'] == 'step') {
-        console.log('STEP')
+        // console.log('STEP')
 
         var step_tag = document.getElementById('step').style.display = 'block'
         document.getElementById('question').style.display = 'none'
@@ -280,7 +308,7 @@ function setSlide(number) {
         document.getElementById('slide_p').innerHTML = question['text']
     }
     else if (question['type'] == 'question') {
-        console.log('QUESTION')
+        // console.log('QUESTION')
 
         document.getElementById('step').style.display = 'none'
         document.getElementById('question').style.display = 'block'
@@ -318,48 +346,36 @@ function setSlide(number) {
 function nextSlide() {
     var step_tag = document.getElementById("slide");
     var slide_number = Number(step_tag.getAttribute('slide_number'));
-
-    if (questions[slide_number]['type'] == 'question') {
-        var question_tag = document.getElementById('question');
-        // console.log(question_tag)
-        var options = question_tag.getElementsByTagName('input');
-        for (var j = 0; j < options.length; j++) {
-            var option = options[j];
-            // console.log(option.getAttribute('correct'));
-            if (option.checked && option.getAttribute('correct') === 'true') {
-                score++;
-                break;
-            }
+    if (checkOptions() || questions[slide_number]['type'] == 'step') {
+        if (questions[slide_number]['type'] == 'question') {
+            countScore()
         }
+
+        console.log('Slide number ' + slide_number)
+
+        var next_slide_number = slide_number + 1;
+        setSlide(next_slide_number);
+        updateQuestionNumber(next_slide_number);
     }
-
-
-    console.log('Slide number ' + slide_number)
-
-    var next_slide_number = slide_number + 1;
-    setSlide(next_slide_number);
-    updateQuestionNumber(next_slide_number);
 }
 
 
 function endTest() {
-    var question_tag = document.getElementById('question');
-    var options = question_tag.getElementsByTagName('input');
-    for (var j = 0; j < options.length; j++) {
-        var option = options[j];
-        if (option.checked && option.getAttribute('correct') === 'true') {
-            score++;
-            break;
+    var step_tag = document.getElementById("slide");
+    var slide_number = Number(step_tag.getAttribute('slide_number'));
+    if (checkOptions() || questions[slide_number]['type'] == 'step') {
+        if (questions[slide_number]['type'] == 'question') {
+            countScore()
         }
-        console.log(option.checked)
+
+        results_div = document.getElementsByClassName('test_results')[0]
+        results_div.style.display = 'block'
+        test_results_p = document.getElementById('test_results_p');
+        test_results_p.innerHTML = 'Количество правильных ответов: ' + score
+
+
+        document.getElementById('question').style.display = 'none'
+        document.getElementById('finish_test').style.display = 'none'
+        document.getElementById('step').style.display = 'none'
     }
-
-    results_div = document.getElementsByClassName('test_results')[0]
-    results_div.style.display = 'block'
-    test_results_p = document.getElementById('test_results_p');
-    test_results_p.innerHTML = 'Ваш результат: ' + score
-
-    document.getElementById('question').style.display = 'none'
-    document.getElementById('finish_test').style.display = 'none'
-    document.getElementById('step').style.display = 'none'
 }
